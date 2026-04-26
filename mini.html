@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini - موقع الفيديوهات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://d1sna5nqfbu5hd.cloudfront.net/dji-logo.svg" alt="DJI Logo">
+        </div>
+        <h1>Mini</h1>
+        <nav>
+            <a href="index.html">العودة للرئيسية</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="options">
+            <div class="option">
+                <h3>DJI Mini 4 Pro</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="rLTtYpftaGs">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/rLTtYpftaGs/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini 3 Pro</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="f3_jp5Jnxhs" data-start="3">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/f3_jp5Jnxhs/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini 3</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="8B80YVrui9M">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/8B80YVrui9M/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini 2 / Mini 2 SE</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="ucuvTjFP6uU">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/ucuvTjFP6uU/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini SE</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="P94B6GoUazU">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/P94B6GoUazU/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mavic Mini</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="c3ounLG7qXo">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/c3ounLG7qXo/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini Neo</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="UFor7DLpZcA" data-start="808">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/UFor7DLpZcA/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mini 5 Pro</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="V06gLSjsUY0">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/V06gLSjsUY0/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 موقع الفيديوهات</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButtons = document.querySelectorAll('.play-button');
+            playButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const container = this.closest('.video-container');
+                    const videoId = container.getAttribute('data-video');
+                    const start = container.getAttribute('data-start');
+                    let url = `https://www.youtube.com/watch?v=${videoId}`;
+                    if (start) {
+                        url += `&t=${start}s`;
+                    }
+                    window.open(url, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

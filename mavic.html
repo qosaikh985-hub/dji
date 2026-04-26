@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavic - موقع الفيديوهات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://d1sna5nqfbu5hd.cloudfront.net/dji-logo.svg" alt="DJI Logo">
+        </div>
+        <h1>Mavic</h1>
+        <nav>
+            <a href="index.html">العودة للرئيسية</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="options">
+            <div class="option">
+                <h3>DJI Mavic 3 Pro</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="R9Sg6q-0gK4" data-start="2">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/R9Sg6q-0gK4/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mavic 3 Cine</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="aabp8euq3oE" data-start="997">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/aabp8euq3oE/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>DJI Mavic 3 Classic</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="aabp8euq3oE" data-start="1000">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/aabp8euq3oE/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic 3</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="aabp8euq3oE" data-start="1000">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/aabp8euq3oE/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic 2 Pro</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="5_MgcnTaQiM">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/5_MgcnTaQiM/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic 2 Zoom</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="F57WGiFv-jM">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/F57WGiFv-jM/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic 2 Enterprise</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="P8flCeJrWtw">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/P8flCeJrWtw/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic Air 2 / DJI Air 2S</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="0ThkmcNWOqc">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/0ThkmcNWOqc/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <h3>Mavic Mini / Mini 2</h3>
+                <div class="videos">
+                    <div class="video-container" data-video="c3ounLG7qXo" data-start="581">
+                        <div class="thumbnail" style="background-image: url('https://img.youtube.com/vi/c3ounLG7qXo/hqdefault.jpg')">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 موقع الفيديوهات</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButtons = document.querySelectorAll('.play-button');
+            playButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const container = this.closest('.video-container');
+                    const videoId = container.getAttribute('data-video');
+                    const start = container.getAttribute('data-start');
+                    let url = `https://www.youtube.com/watch?v=${videoId}`;
+                    if (start) {
+                        url += `&t=${start}s`;
+                    }
+                    window.open(url, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
